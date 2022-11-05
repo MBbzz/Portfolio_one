@@ -1,0 +1,281 @@
+:root{
+    --colorWhite: #fff;
+    --colorBlack: #000;
+    --colorPrimary: rgb(231, 221, 221);
+    --colorSecundary: rgb(200, 33, 33);
+    --fontPrimary: 'Roboto', sans-serif;
+    --fontSecundary: 'Montserrat', sans-serif;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+/*Scroll*/
+
+
+html::-webkit-scrollbar{
+    width: 0.8rem;
+}
+html::-webkit-scrollbar-track{
+    background: inherit;
+}
+html::-webkit-scrollbar-thumb{
+    background: rgba(0,0,0,0.7);
+    border-radius: 5rem;
+}
+
+/*Globales*/
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4{
+    line-height: 1.2;
+}
+
+h1{
+    font-size: 4.7rem;
+    font-family: var(--fontPrimary);
+}
+
+h2{
+    font-size: 4rem;
+    font-family: var(--fontPrimary);
+}
+
+h3{
+    font-size: 3.2rem;
+    font-family: var(--fontSecundary);
+}
+
+h4{
+    font-size: 2.8rem;
+    font-family: var(--fontSecundary);
+}
+
+p{
+    font-family: var(--fontSecundary);
+}
+
+img{
+    max-width: 98%;
+}
+
+/*Menu*/
+
+.menu{
+    position: fixed;
+    background-color: #000;
+    width: 100%;
+    height: 5rem;
+    color: var(--colorWhite);
+    z-index: 1;
+}
+
+.menu .menu__h3{
+    width: 7%;
+    text-align: center;
+    float: left;
+    padding-top: 0.7rem;
+}
+
+.menu .menu__a{
+    width: 32%;
+    text-align: center;
+    font-size: 2rem;
+    float: right;
+    padding-top: 1.5rem;
+    font-family: var(--fontPrimary);
+    letter-spacing: 1.2px;
+}
+
+.menu .menu__a a{
+    color: var(--colorWhite);
+    padding-left: 1rem;
+}
+
+/*Header*/
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)) ,url(../img/header.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+header h1{
+    color: var(--colorWhite);
+    text-align: center;
+    padding-top: 25vh;
+    font-size: 7rem;
+}
+
+header p{
+    color: var(--colorWhite);
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 2rem;
+    max-width: 95%;
+    width: 75rem;
+    margin: 0 auto;
+}
+
+/*Boton que apunta hacia abajo
+Por sea acaso este boton que apunta hacia abajo no es mio, no podria sarle el link del creador ya que
+hace tiempo que lo descubri pero intentare buscarlo y si lo encuentro estara el link en la descripción*/
+
+.box span{
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+    margin: 0 auto;
+    animation: animate 2s infinite;
+    z-index: 10;
+}
+
+.box span:nth-child(2){
+    animation-delay: 0.2s;
+}
+
+.box span:nth-child(3){
+    animation-delay: -0.4s;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        transform: rotate(45deg) translate(10px, 10px);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/*About*/
+
+.about{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--colorWhite);
+    column-count: 2;
+}
+
+.about h3{
+    color: var(--colorBlack);
+    text-align: justify;
+    padding-top: 20rem;
+    font-size: 5rem;
+    font-family: var(--fontPrimary);
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.about p{
+    color: var(--colorBlack);
+    text-align: justify;
+    padding-top: 3rem;
+    font-size: 2.5rem;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.about p a{
+    font-size: 3rem;
+    font-family: var(--fontPrimary);
+    color: var(--colorBlack);
+    line-height: 100px;
+}
+
+.about img{
+    max-width: 90%;
+    margin-top: 15rem;
+    border: var(--colorBlack) 5px solid;
+}
+
+.about__img__2{
+    background-image: url(../img/about__2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 140%;
+    border: var(--colorBlack) 5px solid;
+    border-radius: 10rem 10rem 0 0;
+    height: 30rem;
+    width: 25rem;
+    margin-top: -15rem;
+    margin-left: -12rem;
+    position: absolute;
+}
+
+/*Services*/
+
+.services{
+    margin-top: 10rem;
+    width: 100%;
+    height: auto;
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
+}
+
+.services h3{
+    max-width: 95%;
+    margin: 0 auto;
+    text-align: justify;
+    padding-top: 8rem;
+    font-size: 5rem;
+    font-family: var(--fontPrimary);
+}
+
+.services .services__container{
+    padding-top: 10rem;
+    column-count: 3;
+    max-width: 98%;
+    margin: 0 auto;  
+    text-align: center;
+    padding: 5rem;
+}
+
+.services .services__container p{
+    padding-top: 5rem;
+    max-width: 70%;
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.services .services__container #services__info{
+    border: var(--colorWhite) 3px solid;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+
+.services .services__container #services__info:hover{
+    background-color: var(--colorWhite);
+    color: var(--colorBlack);
+    transition: 0.5s;
+}
